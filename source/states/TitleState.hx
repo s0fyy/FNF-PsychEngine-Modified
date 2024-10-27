@@ -99,7 +99,9 @@ class TitleState extends MusicBeatState
 			http.onData = function (data:String)
 			{
 				returnedData[0] = data.substring(data.indexOf('-'), data.length);
-				updateVersion = data.split('\n')[0].trim();
+				returnedData[1] = data.substring(data.indexOf('-'), data.length);
+				// updateVersion = data.split('\n')[0].trim();
+				updateVersion = returnedData[0];
 				OutdatedState.currChanges = returnedData[1];
 				var curVersion:String = MainMenuState.psychEngineVersion.trim();
 				trace('version online: ' + updateVersion + ', your version: ' + curVersion);
