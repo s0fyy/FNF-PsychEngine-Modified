@@ -102,7 +102,7 @@ class MainMenuState extends MusicBeatState
 		add(moddedVer);
 
 		// username, repository name
-		getCurrentGitHubBranch(null, null);
+		getCurrentGitHubBranch("s0fyy", "FNF-PsychEngine-Modified");
 
 		var psychVer:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		psychVer.scrollFactor.set();
